@@ -25,45 +25,61 @@
             </p>
             <p class="bottom">Nam dictum a <em>nisi mattis</em> commodo.</p>
         </div>
-        <div class="form-container">
-            <form action="" method="get">
-                    <legend>Let's do this!</legend>
-                        <div class="section">
-                            <div class="sub-section">
-                                <label for="first-name">First Name</label>
-                                <input type="text" id="first-name" name="first-name">
+        <form action="" method="get">
+            <div class="form-container">
+                        <legend>Let's do this!</legend>
+                            <div class="section">
+                                <div class="sub-section">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" name="first-name" required>
+                                </div>
+                                <div class="sub-section">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" name="last-name">
+                                </div>
                             </div>
-                            <div class="sub-section">
-                                <label for="last-name">Last Name</label>
-                                <input type="text" id="last-name" name="last-name">
+                            <div class="section">
+                                <div class="sub-section">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="user-mail" required>
+                                </div>
+                                <div class="sub-section">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" 
+                                            id="phone" 
+                                            name="user-phone" 
+                                            pattern="[0-9]{9,13}" 
+                                            required>
+                                </div>
                             </div>
-                        </div>
-                        <div class="section">
-                            <div class="sub-section">
-                                <label for="email">E-mail</label>
-                                <input type="email" id="email" name="user-mail">
+                            <div class="section">
+                                <div class="sub-section">
+                                    <label for="password">Password</label>
+                                    <input type="password" 
+                                            id="password" 
+                                            name="user-password" 
+                                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
+                                            required
+                                            autocomplete="current-password"
+                                            title="Please use UpperCase, LowerCase, Number/SpecialChar and min 8 Chars">
+                                </div>
+                                <div class="sub-section">
+                                    <label for="confirm-pass">Confirm Password</label>
+                                    <input type="password" 
+                                            id="confirm-pass" 
+                                            name="confirm-pass" 
+                                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                            required
+                                            autocomplete="current-password"
+                                            title="Please use UpperCase, LowerCase, Number/SpecialChar and min 8 Chars">
+                                </div>
                             </div>
-                            <div class="sub-section">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="user-phone">
-                            </div>
-                        </div>
-                        <div class="section">
-                            <div class="sub-section">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" name="user-password">
-                            </div>
-                            <div class="sub-section">
-                                <label for="confirm-pass">Confirm Password</label>
-                                <input type="password" id="confirm-pass" name="confirm-pass">
-                            </div>
-                        </div>
-            </form>
-        </div>
-        <div class="bottom">
-            <button type="submit">Create Account</button>
-            <p>Already have and account <a href="">Log in</a></p>
-        </div>
+            </div>
+            <div class="bottom">
+                <button type="submit">Create Account</button>
+                <p>Already have and account <a href="">Log in</a></p>
+            </div>
+        </form>
     </div>
 </body>
 </html>
