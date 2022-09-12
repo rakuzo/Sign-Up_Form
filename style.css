@@ -1,3 +1,54 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS Reset End */
+
 @font-face {
     font-family: 'norsebold';
     src: url('/assets/fonts/norse-bold-webfont.woff2') format('woff2'),
@@ -5,6 +56,10 @@
     font-weight: normal;
     font-style: normal;
 
+}
+
+:root {
+    --side-width: max(700px, 30vw);
 }
 
 body {
@@ -16,22 +71,25 @@ body {
     display: flex;
 }
 
-.side,
+/* .side,
 .main {
     border: 1px solid black;
-}
+} */
 
 .side {
     background-image: url(assets/halie-west-25xggax4bSA-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: max(700px, 30vw);
+    width: var(--side-width);
     color: aliceblue;
 }
 
 .darken {
     background-color: rgba(0, 0, 0, 0.4);
     padding-left: 5.5vw;
+    padding-top: 2vh;
+    position: relative;
+    top: 20vh;
 }
 
 .darken>img {
@@ -41,7 +99,19 @@ body {
 
 .darken>h1 {
     display: inline;
-    font-size: clamp(40px, 10vw, 9.3rem);
+    font-size: clamp(40px, 10vw, 7rem);
     font-family: norsebold, Helvetica, sans-serif;
-    text-align: center;
+    position: relative;
+    bottom: calc(5px + 1.5vh);
+}
+
+.side>.credit {
+   position: absolute;
+   top: 95vh;
+   left: 10vw;
+}
+
+.main {
+    background-color: rgb(220, 220, 220);
+    width: 100%;
 }
