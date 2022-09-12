@@ -60,6 +60,8 @@ table {
 
 :root {
     --side-width: max(700px, 30vw);
+    --marg-bot: 25px;
+    --green-me: #596D48;
 }
 
 body {
@@ -144,15 +146,46 @@ em {
 legend {
     font-size: large;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: var(--marg-bot);
 }
 
 label {
     display: block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    color: rgb(94, 94, 94);
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    height: 1.8em;
+    font-size: 0.9rem;
 }
 
 .section {
-    margin-top: 25px;
+    margin-bottom: var(--marg-bot);
     display: flex;
     column-gap: 5vw;
+}
+
+.bottom {
+    
+}
+
+.bottom>button {
+    color: white;
+    background-color: var(--green-me);
+    border: 1px solid var(--green-me);
+    border-radius: 4px;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: var(--marg-bot);
+}
+
+a {
+    text-decoration: none;
+    color: var(--green-me);
 }
