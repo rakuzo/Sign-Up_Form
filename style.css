@@ -152,6 +152,7 @@ label {
 }
 
 .section {
+    margin-top: 25px;
     display: flex;
     column-gap: 5vw;
 }
