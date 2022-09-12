@@ -18,34 +18,45 @@
         </div>
     </div>
     <div class="main">
-        <div class="">
+        <div class="text-head">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Nam dictum a nisi mattis commodo. 
-                Etiam magna mi, viverra quis urna quis, pretium elementum ligula.
+                Etiam magna mi, viverra quis urna quis, <em>pretium elementum</em> ligula.
             </p>
+            <p class="bottom">Nam dictum a <em>nisi mattis</em> commodo.</p>
         </div>
         <div class="form-container">
             <form action="" method="get">
-                <div>
                     <legend>Let's do this!</legend>
-                        <div>
-                            <label for=""></label>
-                            <input type="text">
-                            <label for=""></label>
-                            <input type="text">
+                        <div class="section">
+                            <div class="sub-section">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" name="first-name">
+                            </div>
+                            <div class="sub-section">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" name="last-name">
+                            </div>
                         </div>
-                        <div>
-                            <label for=""></label>
-                            <input type="email">
-                            <label for=""></label>
-                            <input type="tel">
+                        <div class="section">
+                            <div class="sub-section">
+                                <label for="">E-mail</label>
+                                <input type="email">
+                            </div>
+                            <div class="sub-section">
+                                <label for="">Phone Number</label>
+                                <input type="tel">
+                            </div>
                         </div>
-                        <div>
-                            <label for=""></label>
-                            <input type="password">
-                            <label for=""></label>
-                            <input type="password">
+                        <div class="section">
+                            <div class="sub-section">
+                                <label for="">Password</label>
+                                <input type="password">
+                            </div>
+                            <div class="sub-section">
+                                <label for="">Confirm Password</label>
+                                <input type="password">
+                            </div>
                         </div>
             </form>
         </div>
