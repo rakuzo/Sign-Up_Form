@@ -1,23 +1,31 @@
 const warning = document.querySelector(".warning");
 const submit = document.querySelector("#submit");
+const form = document.querySelector("form");
 
-function confirmPassword() {
+function confirmPassword(event) {
     const pw1 = document.getElementById("password");
     const pw2 = document.getElementById("confirm-pass");
 
-    console.log(pw1.value);
+    console.log(!(pw1.validity.patternMismatch));
+    console.log(pw1.validity.valueMissing);
     console.log(pw2.value);
+    
     console.log(warning);
-    if (pw1.value === "" || pw1.value === null) {
+    if (pw1.validity.valueMissing) {
+        event.preventDefault();
         return;
-    } else if (pw1.value !== pw2.value) {
-        // alert("password didn't match");
+    } else if ((pw1.value !== pw2.value)) {
         warning.innerText = "*Password didn't match";
-    } else {
-        // alert("Succes");
+        event.preventDefault();
+    } else if (!(pw1.validity.patternMismatch) && !(pw2.validity.patternMismatch)) {
         warning.innerText = "Password created";
         warning.style.color = "#99bb7b";
+    } else {
+        event.preventDefault();
+        return;
     }
 }
 
-submit.addEventListener("click", confirmPassword)
+form.addEventListener("submit", (e) => {
+    confirmPassword(e);
+})
