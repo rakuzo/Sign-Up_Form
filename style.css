@@ -173,10 +173,6 @@ input:invalid {
     border: 1.5px solid orangered;
 }
 
-input[type=password]:invalid::after {
-    content: "Password doesn't match";
-}
-
 input:placeholder-shown {
     border: 1.5px solid var(--white-line);
 }
@@ -193,6 +189,14 @@ input:focus:placeholder-shown {
 
 .sub-section {
     margin-top: 15px;
+}
+
+.warning {
+    color: orangered;
+    
+    font-size: 0.8rem;
+    margin-top: 5px;
+    height: 12px;
 }
 
 button {

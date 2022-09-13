@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="side">
@@ -31,11 +32,11 @@
                         <div class="section">
                                 <div class="sub-section">
                                     <label for="first-name">First Name</label>
-                                    <input type="text" id="first-name" name="first-name" size="23" placeholder=" " required>
+                                    <input type="text" id="first-name" name="first-name" size="23" pattern="^[^0-9]+$" placeholder=" " required>
                                 </div>
                                 <div class="sub-section">
                                     <label for="last-name">Last Name</label>
-                                    <input type="text" id="last-name" name="last-name" size="23">
+                                    <input type="text" id="last-name" name="last-name" size="23" pattern="^[^0-9]+$">
                                 </div>
                             </div>
                         <div class="section">
@@ -80,9 +81,10 @@
                                             title="Please use UpperCase, LowerCase, Number/SpecialChar and min 8 Chars">
                         </div>
                         </div>
+                        <div class="warning"></div>
             </div>
             <div class="bottom">
-                <button type="submit">Create Account</button>
+                <button type="submit" id="submit">Create Account</button>
                 <p>Already have and account <a href="">Log in</a></p>
             </div>
         </form>
