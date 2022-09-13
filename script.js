@@ -6,11 +6,6 @@ function confirmPassword(event) {
     const pw1 = document.getElementById("password");
     const pw2 = document.getElementById("confirm-pass");
 
-    console.log(!(pw1.validity.patternMismatch));
-    console.log(pw1.validity.valueMissing);
-    console.log(pw2.value);
-    
-    console.log(warning);
     if (pw1.validity.valueMissing) {
         event.preventDefault();
         return;
