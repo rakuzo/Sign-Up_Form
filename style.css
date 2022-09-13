@@ -63,6 +63,8 @@ table {
     --marg-bot: 25px;
     --green-me: #596D48;
     --green-li: #99bb7b;
+    --white-line: #E5E7EB;
+    --blue-line: lightskyblue;
 }
 
 body {
@@ -154,7 +156,7 @@ label {
 }
 
 input {
-    border: 1.5px solid #E5E7EB;
+    border: 1.5px solid var(--white-line);
     border-radius: 5px;
     height: 1.8em;
     font-size: 0.9rem;
@@ -163,16 +165,24 @@ input {
 }
 
 input:focus {
-    border: 1.5px solid lightskyblue;
+    border: 1.5px solid var(--blue-line);
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
 }
 
-input[type=password]:invalid {
+input:invalid {
     border: 1.5px solid orangered;
 }
 
 input[type=password]:invalid::after {
     content: "Password doesn't match";
+}
+
+input:placeholder-shown {
+    border: 1.5px solid var(--white-line);
+}
+
+input:focus:placeholder-shown {
+    border: 1.5px solid var(--blue-line);
 }
 
 .section {
